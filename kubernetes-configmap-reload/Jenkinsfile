@@ -62,7 +62,7 @@ pipeline {
 	            sh 'ansible-playbook ${WORKSPACE}/kubernetes-configmap-reload/server_setup.yml'
 			}
 		}
-	    stage("Create deployment") {
+	    stage("Create-deployment") {
 			when {
 				expression { params.action == 'create' }
 			}
